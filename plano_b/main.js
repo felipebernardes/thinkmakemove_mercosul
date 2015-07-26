@@ -1,6 +1,7 @@
  function calcula() {
     
     tempo = $('#tempo').val();
+    resposta = $('#resposta');
     
     habitantes_sp = 11900000.0;
     gasto_minuto = 9.0; //litros no chuveiro
@@ -25,18 +26,20 @@
     }();
      
     julgamento = function() {
-        parametro = calc_comparativo;
-        if (parametro > 0) {
-            mensagem = "Bom";
-        } else if (parametro = 0) {
-            mensagem = "Neutro";
-        } else if (parametro < 0) {
-            mensagem = "Ruim";
+        parametro = calc_gasto_individual;
+        
+        if (parametro < 150) {
+            mensagem = "PARABÉNS. Se todos fizessem como você estariam contribuindo para um mundo melhor.";
+        } else if (150 > parametro > 250) {
+            mensagem = "SATISFATÓRIO, mas disperdiça muita água. Você pode fazer melhor.";
+        } else {
+            mensagem = "PÉSSIMO. VOCÊ PRECISA REVER OS SEUS CONCEITOS";
         }
+        
+        $('.titulo-resposta').text(mensagem);
+        $('.texto-resposta').text(mensagem);
+        
     }();
-    
-     
-     console.log(calc_comparativo);
 }
 
 
