@@ -24,6 +24,17 @@
         return calc_gasto_total / calc_chuva_disponivel_historica;
     }();
      
+    julgamento = function() {
+        parametro = calc_comparativo;
+        if (parametro > 0) {
+            mensagem = "Bom";
+        } else if (parametro = 0) {
+            mensagem = "Neutro"
+        } else (parametro < 0) {
+            mensagem = "Ruim"
+        }
+    }
+     
      console.log(calc_comparativo);
 }
 
