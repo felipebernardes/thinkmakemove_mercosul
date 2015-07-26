@@ -30,10 +30,11 @@
             mensagem = "Bom";
         } else if (parametro = 0) {
             mensagem = "Neutro";
-        } else (parametro < 0) {
+        } else if (parametro < 0) {
             mensagem = "Ruim";
         }
-    }
+    }();
+    
      
      console.log(calc_comparativo);
 }
