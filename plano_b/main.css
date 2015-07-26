@@ -1,3 +1,29 @@
 body {
-    background-color: blue;
+    background-color: aliceblue;
+}
+
+.calculator {
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.calculator form {
+    flex: auto;
+    width: 80vw;
+    margin: auto;
+    max-width: 550px;
+}
+
+.calculator input {
+    display: block;
+    margin: 2rem 0;
+}
+
+/*helpers*/
+.hide {
+    display: none;
 }

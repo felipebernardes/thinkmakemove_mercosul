@@ -2,16 +2,26 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Conscientize-se</title>
-        <link type="text/css" rel="stylesheet" href="reset.css">
+        <title>Consciência em Prática</title>
         <link type="text/css" rel="stylesheet" href="main.css">
-        <script type="text/javascript"src="jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
     </head>
     <body>
-        <form action="main.js" id="calculadora">
-            <label for="tempo">Quantos minutos você demora no banho diariamente?</label>
-            <input id="tempo" type="number">
-            <input type="submit" placeholder="Calcular">
-        </form>
+       <section class="calculator">
+            <div>
+                <h1>Consciência em Prática</h1>
+                <p>Preocupar-se com a falta de água na cidade de São Paulo não é difícil. Descubra se você faz sua parte quanto a isso:</p>
+            </div>
+            <form id="calculadora" onsubmit="event.preventDefault(); return calcula();">
+                <label for="tempo">Quantos minutos você demora no banho diariamente?</label>
+                <input id="tempo" name="tempo" type="number">
+                <input type="submit" placeholder="Calcular">
+            </form>
+            <div class="resposta">
+                <h2 class="titulo-resposta"></h2>
+                <p class="texto-resposta"></p>
+            </div>           
+       </section>
     </body>
 </html>
