@@ -7,14 +7,24 @@
     area_km2_sp = 1523.0;
     chuva_por_mm_sp = area_km2_sp * 1000000.0;
     media_historica_mm_dia = 4.0;
-     
-    gasto_individual = tempo * gasto_minuto;
-    gasto_total = gasto_individual * habitantes_sp;
-     
-    chuva_disponivel_historica_L = chuva_por_mm_sp * media_historica_mm_dia;
-    comparativo = gasto_total/chuva_disponivel_historica_L;
     
-    console.log(comparativo);
+    calc_gasto_individual = function() {
+        return tempo*gasto_minuto;
+    }();
+     
+    calc_gasto_total = function() {
+        return calc_gasto_individual * habitantes_sp;
+    }();
+     
+    calc_chuva_disponivel_historica = function() {
+        return chuva_por_mm_sp * media_historica_mm_dia; //em litros
+    }();
+    
+    calc_comparativo = function() {
+        return calc_gasto_total / calc_chuva_disponivel_historica;
+    }();
+     
+     console.log(calc_comparativo);
 }
 
 
