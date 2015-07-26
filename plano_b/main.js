@@ -29,9 +29,9 @@
         if (parametro > 0) {
             mensagem = "Bom";
         } else if (parametro = 0) {
-            mensagem = "Neutro"
+            mensagem = "Neutro";
         } else (parametro < 0) {
-            mensagem = "Ruim"
+            mensagem = "Ruim";
         }
     }
      
