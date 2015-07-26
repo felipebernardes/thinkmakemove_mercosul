@@ -7,6 +7,7 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+	<link href="css/agua.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -48,9 +49,9 @@
 		<div class="bar bar-header bar-calm">
 	  		<h1 class="title">Consciência em Prática</h1>
 		</div>
-            <div>
-                <p>Preocupar-se com a falta de água na cidade de São Paulo não é difícil. Descubra se você faz sua parte quanto a isso:</p>
-            </div>
+         <div class="main-content">
+                <p class="agua-center">Preocupar-se com a falta de água na cidade de São Paulo não é difícil. Descubra se você faz sua parte quanto a isso:</p>
+            
             <form id="calculadora" onsubmit="event.preventDefault(); return calcula();">
                 <label for="tempo">Quantos minutos você demora no banho diariamente?</label>
                 <input id="tempo" name="tempo" type="number">
@@ -59,7 +60,12 @@
             <div id="resposta">
                 <h2 class="titulo-resposta"></h2>
                 <p class="texto-resposta"></p>
-            </div>           
+            </div>
+	<div class="compartilhar">
+		<button class="button icon-left ion-social-facebook button-positive"></button>  
+		<button class="button icon-left ion-social-twitter button-positive"></button>    
+	</div>
+	</div>       
        </ion-content>
 
 

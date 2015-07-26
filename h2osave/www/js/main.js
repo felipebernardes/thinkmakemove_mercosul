@@ -29,14 +29,17 @@
         parametro = calc_gasto_individual;
         
         if (parametro < 150) {
-            mensagem = "PARABÉNS. Se todos fizessem como você estariam contribuindo para um mundo melhor.";
+		titulo = "PARABÉNS!";
+            mensagem = "Se todos fizessem como você estariam contribuindo para um mundo melhor.";
         } else if (150 > parametro > 250) {
-            mensagem = "SATISFATÓRIO, mas disperdiça muita água. Você pode fazer melhor.";
+		titulo = "SATISFATÓRIO";
+            mensagem = "mas fique atento: Você pode fazer melhor.";
         } else {
-            mensagem = "PÉSSIMO. VOCÊ PRECISA REVER OS SEUS CONCEITOS";
+		titulo = "PÉSSIMO";
+            mensagem = "VOCÊ PRECISA REVER OS SEUS CONCEITOS";
         }
         
-        $('.titulo-resposta').text(mensagem);
+        $('.titulo-resposta').text(titulo);
         $('.texto-resposta').text(mensagem);
         
     }();
